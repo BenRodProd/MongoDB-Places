@@ -18,7 +18,6 @@ async function sendRequest(url, { arg }) {
   if (!response.ok) {
     console.error(`Error: ${response.status}`);
   }
-  router.push("/");
 }
 export default function EditPage() {
   const router = useRouter();
@@ -33,6 +32,7 @@ export default function EditPage() {
     console.log(place);
     console.log("Place edited (but really...");
     await trigger(place);
+    router.push("/");
   }
 
   if (!isReady || isLoading || error) return <h2>Loading...</h2>;
