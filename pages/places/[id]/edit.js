@@ -4,7 +4,7 @@ import useSWR from "swr";
 import Form from "../../../components/Form.js";
 import { StyledLink } from "../../../components/StyledLink.js";
 import useSWRMutation from "swr/mutation";
-import { useRouter } from "next/router";
+
 async function sendRequest(url, { arg }) {
   // here we set the request method
   const response = await fetch(url, {
