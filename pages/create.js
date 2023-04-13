@@ -24,7 +24,7 @@ export default function CreatePlacePage() {
   const router = useRouter();
   const { trigger } = useSWRMutation("/api/places", sendRequest);
 
-  function addPlace(event) {
+  async function addPlace(event) {
     trigger(event);
     router.push("/");
   }
